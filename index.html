@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milad Yek - Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%26gt;_%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            /* Default: Light Mode */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #0f172a;
+            --text-accent: #0284c7;
+            --text-muted: #64748b;
+            --border-color: #0284c7;
+            --border-card: #e2e8f0;
+            --contact-icon-bg-hover: #e0f2fe;
+            --contact-icon-color: var(--text-accent);
+            --link-color: #0ea5e9;
+            --link-hover-color: #0369a1;
+            --button-bg: #0284c7;
+            --button-text: #ffffff;
+            --button-hover-bg: #0369a1;
+            --tag-bg: #e0f2fe;
+            --tag-border: #7dd3fc;
+            --tag-text: #0369a1;
+            --top-bar-bg: #ffffff;
+            --top-bar-border: #e2e8f0;
+            --footer-bg: #1e293b;
+            --footer-text: #e2e8f0;
+            --footer-border: #334155;
+            --scrollbar-track: #f1f5f9;
+            --scrollbar-thumb: #94a3b8;
+            --scrollbar-thumb-hover: #64748b;
+            --cert-icon-color: #fbbf24;
+            --edu-icon-color: var(--text-accent); /* Color for education icon */
+
+            /* Theme Toggle Variables */
+            --theme-toggle-track-bg: var(--bg-secondary);
+            --theme-toggle-track-border: var(--border-card);
+            --theme-toggle-knob-bg: var(--bg-card);
+            --theme-toggle-knob-shadow: rgba(0,0,0,0.1);
+            --theme-toggle-knob-icon-color: var(--text-accent);
+            --theme-toggle-slot-icon-color: var(--text-muted);
+            --theme-toggle-slot-icon-active-color: var(--text-accent);
+
+
+            --scrollspy-text: var(--text-muted);
+            --scrollspy-active-text: var(--text-accent);
+            --scrollspy-hover-text: var(--text-accent);
+            --scrollspy-bg: rgba(255, 255, 255, 0.9);
+            --scrollspy-border: var(--border-card);
+            --progress-bar-bg: var(--text-accent);
+
+
+            --skill-laravel-color: #FF2D20;
+            --skill-react-color: #61DAFB;
+            --skill-php-color: #777BB4;
+            --skill-wordpress-color: #21759B;
+            --skill-python-color: #3776AB;
+            --skill-sql-color: #00758F;
+            --skill-jamstack-color: #F05033;
+            --skill-hugo-color: #FF4088;
+            --skill-elk-color: #00A599;
+            --skill-html-color: #E34F26;
+            --skill-css-color: #1572B6;
+            --skill-sass-color: #CC6699;
+            --skill-bootstrap-color: #7952B3;
+            --skill-java-color: #f89820;
+            --skill-dotnet-color: #512BD4;
+            --skill-cplusplus-color: #00599C;
+            --skill-cordova-color: #465566;
+            --skill-git-color: #F05032;
+            --skill-vscode-color: #007ACC;
+            --skill-docker-color: #2496ED;
+            --skill-aws-color: #FF9900;
+            --skill-jira-color: #0052CC;
+            --skill-asana-color: #CE4470;
+            --skill-adobe-color: #FF0000;
+            --skill-android-color: #3DDC84;
+            --skill-excel-color: #217346;
+            --skill-db-color: #00758F;
+            --skill-linux-color: #FCC624;
+            --skill-monitoring-color: #FF780A;
+            --skill-golang-color: #00ADD8;
+            --skill-nosql-color: #5A6772;
+            --skill-javascript-color: #F7DF1E;
+            --skill-typescript-color: #3178C6;
+            --skill-nodejs-color: #339933;
+            --skill-shell-color: #4EAA25;
+        }
+
+        .dark-mode {
+            --bg-primary: #0d1117;
+            --bg-secondary: #000000;
+            --bg-card: var(--bg-primary);
+            --text-primary: #86efac;
+            --text-secondary: #4ade80;
+            --text-accent: #4ade80;
+            --text-muted: #9ca3af;
+            --border-color: #4ade80;
+            --border-card: #30363d;
+            --contact-icon-bg-hover: rgba(74, 222, 128, 0.1);
+            --contact-icon-color: var(--text-accent);
+            --link-color: var(--text-accent);
+            --link-hover-color: var(--text-primary);
+            --button-bg: #2da44e;
+            --button-text: #ffffff;
+            --button-hover-bg: #258942;
+            --tag-bg: rgba(74, 222, 128, 0.15);
+            --tag-border: #4ade80;
+            --tag-text: #bbf7d0;
+            --top-bar-bg: #000000;
+            --top-bar-border: #22c55e;
+            --footer-bg: #000000;
+            --footer-text: #4ade80;
+            --footer-border: #22c55e;
+            --scrollbar-track: #0d1117;
+            --scrollbar-thumb: #4ade80;
+            --scrollbar-thumb-hover: #22c55e;
+            --cert-icon-color: #a5d6a7;
+            --edu-icon-color: var(--text-accent);
+
+            --theme-toggle-track-bg: #21262d;
+            --theme-toggle-track-border: var(--border-card);
+            --theme-toggle-knob-bg: #30363d;
+            --theme-toggle-knob-shadow: rgba(0,0,0,0.3);
+            --theme-toggle-knob-icon-color: var(--text-accent);
+            --theme-toggle-slot-icon-color: #484f58; /* Dimmer for dark mode */
+            --theme-toggle-slot-icon-active-color: var(--text-accent);
+
+
+            --scrollspy-text: var(--text-muted);
+            --scrollspy-active-text: var(--text-accent);
+            --scrollspy-hover-text: var(--text-accent);
+            --scrollspy-bg: rgba(13, 17, 23, 0.9);
+            --scrollspy-border: var(--border-card);
+            --progress-bar-bg: var(--text-accent);
+
+            /* Skill icon colors in dark mode will now inherit from :root (original brand colors) */
+        }
+
+        .night-mode {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: var(--bg-primary);
+            --text-primary: #999999;
+            --text-secondary: #bbbbbb;
+            --text-accent: #6366f1;
+            --text-muted: #555555;
+            --border-color: var(--text-accent);
+            --border-card: #222222;
+            --contact-icon-bg-hover: rgba(99, 102, 241, 0.1);
+            --contact-icon-color: var(--text-accent);
+            --link-color: #818cf8;
+            --link-hover-color: #a5b4fc;
+            --button-bg: var(--text-accent);
+            --button-text: #eeeeee;
+            --button-hover-bg: #4f46e5;
+            --tag-bg: rgba(99, 102, 241, 0.15);
+            --tag-border: var(--text-accent);
+            --tag-text: #c7d2fe;
+            --top-bar-bg: #000000;
+            --top-bar-border: var(--text-accent);
+            --footer-bg: #000000;
+            --footer-text: var(--text-accent);
+            --footer-border: var(--text-accent);
+            --scrollbar-track: #0a0a0a;
+            --scrollbar-thumb: var(--text-accent);
+            --scrollbar-thumb-hover: #4338ca;
+            --cert-icon-color: #71717a;
+            --edu-icon-color: var(--text-accent);
+
+            --theme-toggle-track-bg: #1c1c1c;
+            --theme-toggle-track-border: var(--border-card);
+            --theme-toggle-knob-bg: #2d2d2d;
+            --theme-toggle-knob-shadow: rgba(0,0,0,0.4);
+            --theme-toggle-knob-icon-color: var(--text-accent);
+            --theme-toggle-slot-icon-color: #4a4a4a;
+            --theme-toggle-slot-icon-active-color: var(--text-accent);
+
+            --scrollspy-text: var(--text-muted);
+            --scrollspy-active-text: var(--text-accent);
+            --scrollspy-hover-text: var(--text-accent);
+            --scrollspy-bg: rgba(0, 0, 0, 0.85);
+            --scrollspy-border: var(--border-card);
+            --progress-bar-bg: var(--text-accent);
+
+            /* Skill icon colors in night mode will now inherit from :root (original brand colors) */
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .font-roboto-mono { font-family: 'Roboto Mono', monospace; }
+        .card { @apply p-6 rounded-lg border; background-color: var(--bg-card); border-color: var(--border-card); transition: background-color 0.3s ease, border-color 0.3s ease; }
+        .tag { @apply px-3 py-1 rounded-full text-sm font-medium border; background-color: var(--tag-bg); border-color: var(--tag-border); color: var(--tag-text); transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+        ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+
+        #topBar {
+            background-color: var(--top-bar-bg);
+            border-bottom: 1px solid var(--top-bar-border);
+            transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+        }
+        #topBar .brand-name { color: var(--text-accent); }
+        .terminal-prefix {
+            font-family: 'Roboto Mono', monospace;
+            color: var(--text-accent);
+            margin-right: 0.25em;
+        }
+        .blinking-cursor {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* New Theme Toggle Styles */
+        #themeToggleTrack {
+            background-color: var(--theme-toggle-track-bg);
+            border: 1px solid var(--theme-toggle-track-border);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            user-select: none; /* Prevent text selection during drag */
+        }
+        #themeToggleKnob {
+            background-color: var(--theme-toggle-knob-bg);
+            box-shadow: 0 2px 4px var(--theme-toggle-knob-shadow);
+            transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s ease;
+            cursor: grab;
+        }
+        #themeToggleKnob.dragging {
+            cursor: grabbing;
+            transition: background-color 0.3s ease; /* Remove transform transition while dragging */
+        }
+        #themeToggleKnob i {
+            color: var(--theme-toggle-knob-icon-color);
+            transition: color 0.3s ease;
+        }
+        .theme-slot {
+            cursor: pointer;
+        }
+        .theme-slot-icon {
+            color: var(--theme-toggle-slot-icon-color);
+            transition: color 0.3s ease;
+        }
+        .theme-slot-icon.active {
+            color: var(--theme-toggle-slot-icon-active-color);
+        }
+
+
+        /* Alternating Section Backgrounds */
+        #about, #skills, #passion_projects {
+            background-color: var(--bg-secondary);
+        }
+        #experience, #licenses_certifications, #contact {
+            background-color: var(--bg-primary);
+        }
+
+        #about, #experience, #licenses_certifications, #contact, #skills, #passion_projects {
+             padding-top: 6rem;
+             padding-bottom: 4rem;
+        }
+        #about { padding-top: 6rem; padding-bottom: 6rem; }
+
+
+        #about .hero-name {
+            color: var(--text-accent);
+            min-height: 80px;
+        }
+        #about .hero-subtitle {
+             color: var(--text-muted);
+             min-height: 64px;
+        }
+        #about .hero-description { color: var(--text-primary); }
+        #about .hero-button { background-color: var(--button-bg); color: var(--button-text); }
+        #about .hero-button:hover { background-color: var(--button-hover-bg); }
+
+         #skills .card.skill-card-item,
+         #passion_projects .card {
+            background-color: transparent !important;
+        }
+        #passion_projects .card {
+            border: none !important;
+            padding-left: 0.5rem; padding-right: 0.5rem;
+        }
+        #skills .card.skill-card-item {
+             border-color: var(--border-card);
+        }
+
+
+        #passion_projects .card p { color: var(--text-primary); }
+        #passion_projects .card h3, #passion_projects .card h3 a { color: var(--text-accent); }
+        #passion_projects .card a:not(h3 a) { color: var(--link-color); }
+        #passion_projects .card .github-link-inline {
+            color: var(--link-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 0.5rem;
+        }
+        #passion_projects .card .github-link-inline:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+        #passion_projects .card .github-link-inline i {
+            margin-right: 0.25rem;
+        }
+
+
+        .experience-title, .project-title, .skill-title, .cert-title { color: var(--text-accent); }
+        .company-name { color: var(--text-accent); }
+        .dates, .cert-issuer, .location-info { color: var(--text-muted); }
+        .location-info .fa-map-marker-alt { margin-right: 0.25rem; }
+
+
+        .card a { color: var(--link-color); text-decoration: underline; }
+        .card a:hover { color: var(--link-hover-color); }
+
+        footer { background-color: var(--footer-bg); color: var(--footer-text); border-top: 1px solid var(--footer-border); transition: background-color 0.3s ease, color 0.3s ease, border-top-color 0.3s ease; }
+        footer .footer-subtext { color: var(--text-muted); }
+
+        .experience-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+            opacity: 0;
+        }
+        .experience-details.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .details-toggle {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            color: var(--link-color);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        .details-toggle:hover {
+            color: var(--link-hover-color);
+        }
+        .details-toggle .arrow {
+            margin-left: 0.25rem;
+            transition: transform 0.3s ease;
+        }
+        .details-toggle .arrow.open {
+            transform: rotate(90deg);
+        }
+
+        #contact .card {
+            padding: 2rem;
+        }
+        .contact-icons-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .contact-icon-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: transparent;
+            color: var(--contact-icon-color);
+            font-size: 1.75rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            position: relative;
+        }
+        .contact-icon-link-animated {
+            opacity: 0;
+            transform: scale(0.85) translateY(10px);
+            transition-property: opacity, transform, background-color;
+            transition-duration: 0.4s, 0.4s, 0.2s;
+            transition-timing-function: ease-out, ease-out, ease;
+        }
+
+        .contact-icon-link:hover {
+            background-color: var(--contact-icon-bg-hover);
+            transform: translateY(-3px) scale(1.05);
+        }
+        .contact-icon-link-animated.is-visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        .contact-icon-link .tooltip-text {
+            visibility: hidden;
+            width: max-content;
+            background-color: var(--bg-card);
+            color: var(--text-primary);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.75rem;
+            border: 1px solid var(--border-card);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .contact-icon-link:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+        .skill-icon { margin-bottom: 0.5rem; display: inline-block; font-size: 2.25rem; }
+        .skill-icon.fa-laravel { color: var(--skill-laravel-color); }
+        .skill-icon.fa-react { color: var(--skill-react-color); }
+        .skill-icon.fa-php { color: var(--skill-php-color); }
+        .skill-icon.fa-wordpress { color: var(--skill-wordpress-color); }
+        .skill-icon.fa-python { color: var(--skill-python-color); }
+        .skill-icon.fa-database { color: var(--skill-sql-color); }
+        .skill-icon.fa-layer-group { color: var(--skill-jamstack-color); }
+        .skill-icon.fa-rocket { color: var(--skill-hugo-color); }
+        .skill-icon.fa-searchengin { color: var(--skill-elk-color); }
+        .skill-icon.fa-html5 { color: var(--skill-html-color); }
+        .skill-icon.fa-css3-alt { color: var(--skill-css-color); }
+        .skill-icon.fa-sass { color: var(--skill-sass-color); }
+        .skill-icon.fa-bootstrap { color: var(--skill-bootstrap-color); }
+        .skill-icon.fa-java { color: var(--skill-java-color); }
+        .skill-icon.fa-cogs { color: var(--skill-dotnet-color); }
+        .skill-icon.fa-code { color: var(--skill-cplusplus-color); }
+        .skill-icon.fa-mobile-alt { color: var(--skill-cordova-color); }
+        .skill-icon.fa-git-alt { color: var(--skill-git-color); }
+        .skill-icon.fa-code-branch { color: var(--skill-vscode-color); }
+        .skill-icon.fa-docker { color: var(--skill-docker-color); }
+        .skill-icon.fa-aws { color: var(--skill-aws-color); }
+        .skill-icon.fa-jira { color: var(--skill-jira-color); }
+        .skill-icon.fa-tasks { color: var(--skill-asana-color); }
+        .skill-icon.fa-camera-retro { color: var(--skill-adobe-color); }
+        .skill-icon.fa-android { color: var(--skill-android-color); }
+        .skill-icon.fa-file-excel { color: var(--skill-excel-color); }
+        .skill-icon.fa-server { color: var(--skill-db-color); }
+        .skill-icon.fa-linux { color: var(--skill-linux-color); }
+        .skill-icon.fa-chart-line { color: var(--skill-monitoring-color); }
+        .skill-icon.fa-golang { color: var(--skill-golang-color); }
+        .skill-icon.fa-hdd { color: var(--skill-nosql-color); }
+        .skill-icon.fa-js { color: var(--skill-javascript-color); }
+        .skill-icon.fa-file-code { color: var(--skill-typescript-color); }
+        .skill-icon.fa-node-js { color: var(--skill-nodejs-color); }
+        .skill-icon.fa-terminal { color: var(--skill-shell-color); }
+
+
+        .cert-icon-fa, .edu-icon-fa {
+            font-size: 1.875rem;
+            margin-bottom: 0.75rem;
+        }
+        .cert-icon-fa { color: var(--cert-icon-color); }
+        .edu-icon-fa { color: var(--edu-icon-color); }
+
+
+        #scrollToTopBtn {
+            background-color: var(--button-bg);
+            color: var(--button-text);
+            border: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+        }
+        #scrollToTopBtn:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        #scrollspyNav {
+            position: fixed;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            background-color: var(--scrollspy-bg);
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            z-index: 45;
+            border: 1px solid var(--scrollspy-border);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+        }
+        #scrollspyNav.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        #scrollspyNav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #scrollspyNav li a {
+            display: block;
+            padding: 0.4rem 0.6rem;
+            font-size: 0.7rem;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--scrollspy-text);
+            text-decoration: none;
+            border-radius: 0.25rem;
+            transition: color 0.2s ease, background-color 0.2s ease, font-weight 0.2s ease;
+            white-space: nowrap;
+            text-align: right;
+        }
+        #scrollspyNav li a:hover {
+            color: var(--scrollspy-hover-text);
+            background-color: rgba(128,128,128,0.1);
+        }
+        #scrollspyNav li a.active-scrollspy {
+            color: var(--scrollspy-active-text);
+            font-weight: 700;
+        }
+
+        @media (max-width: 1024px) {
+            #scrollspyNav {
+                display: none;
+            }
+        }
+
+        #scrollProgressBarContainer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: transparent;
+            z-index: 60;
+        }
+        #scrollProgressBar {
+            height: 100%;
+            background-color: var(--progress-bar-bg);
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .section-title-underline {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.75rem;
+        }
+        .section-title-underline::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--text-accent);
+            border-radius: 1.5px;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-card-item {
+            opacity: 0;
+            transform: scale(0.85) translateY(10px);
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
+        .skill-card-item.is-visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <div id="scrollProgressBarContainer">
+        <div id="scrollProgressBar"></div>
+    </div>
+
+    <div id="topBar" class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#about" class="text-2xl font-bold font-roboto-mono brand-name">
+                <span class="terminal-prefix">&gt;<span class="blinking-cursor">_</span></span>
+            </a>
+            <div id="themeToggleTrack" class="relative flex items-center rounded-full p-0.5 cursor-pointer" style="width: 105px; height: 40px;">
+                <div id="themeToggleKnob" class="absolute rounded-full flex items-center justify-center" style="width: 34px; height: 34px; top: 2px;">
+                    <i id="themeKnobIcon" class="fas fa-sun text-base"></i>
+                </div>
+                <div class="w-1/3 h-full flex items-center justify-center theme-slot" data-theme="light" title="Light Mode">
+                    <i class="fas fa-sun theme-slot-icon text-lg"></i>
+                </div>
+                <div class="w-1/3 h-full flex items-center justify-center theme-slot" data-theme="dark" title="Dark Mode">
+                    <i class="fas fa-moon theme-slot-icon text-lg"></i>
+                </div>
+                <div class="w-1/3 h-full flex items-center justify-center theme-slot" data-theme="night" title="Night Mode">
+                    <i class="fas fa-lightbulb theme-slot-icon text-lg"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scrollspyNav">
+        <ul>
+            <li><a href="#about" class="scrollspy-link">About</a></li>
+            <li><a href="#experience" class="scrollspy-link">Experience</a></li>
+            <li><a href="#skills" class="scrollspy-link">Skills</a></li>
+            <li><a href="#licenses_certifications" class="scrollspy-link">Certs</a></li>
+            <li><a href="#passion_projects" class="scrollspy-link">Projects</a></li>
+            <li><a href="#contact" class="scrollspy-link">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <header id="about" data-section-name="About" class="portfolio-section">
+        <div class="container mx-auto px-6 text-center">
+            <img src="Milad_Yekleh.jpg" alt="Milad Yek" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 object-cover" style="border-color: var(--border-color);" onerror="this.onerror=null; this.src='https://placehold.co/160x160/0d1117/4ade80?text=MY';">
+            <h1 id="hero-name-typewriter" class="text-5xl md:text-6xl font-bold font-roboto-mono mb-2 md:mb-4 hero-name">Milad Yekleh</h1>
+            <p id="hero-subtitle-typewriter" class="text-xl md:text-2xl mb-2 md:mb-3 font-light hero-subtitle">Software Engineer</p>
+            <p id="careerObjectives" class="text-lg md:text-xl max-w-3xl mx-auto hero-description">
+                A visionary by nature and software engineer by trade, I transform ideas into code, code into pixels, and pixels into the future.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#contact" class="font-semibold px-8 py-3 rounded-md shadow-md transition-colors duration-300 font-roboto-mono hero-button">Get in Touch</a>
+                <a href="Milad's CV.pdf" download="Milad_Yek_CV.pdf" id="heroDownloadCvBtn" class="font-semibold px-8 py-3 rounded-md shadow-md transition-colors duration-300 font-roboto-mono hero-button inline-flex items-center justify-center">
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" data-section-name="Experience" class="portfolio-section fade-in-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center font-roboto-mono mb-12 md:mb-16 section-title-underline" style="color: var(--text-accent);">Career Experience</h2>
+            <div class="space-y-10">
+                <div class="card">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-1">
+                        <div>
+                            <h3 class="text-2xl font-semibold font-roboto-mono experience-title">Full Stack Developer</h3>
+                            <p class="text-lg font-semibold mb-0 company-name">
+                                <a href="https://grutto.com" target="_blank" rel="noopener noreferrer" class="hover:underline" style="color: var(--link-color);">GRUTTO.com</a>
+                            </p>
+                            <p class="text-sm location-info mt-1">
+                                <i class="fas fa-map-marker-alt"></i> Netherlands - Remote
+                            </p>
+                        </div>
+                        <span class="text-sm mt-2 md:mt-0 font-roboto-mono dates">2023 - 2024</span>
+                    </div>
+                    <button class="details-toggle">
+                        Details <i class="fas fa-chevron-right arrow ml-1"></i>
+                    </button>
+                    <ul class="experience-details list-disc list-inside space-y-1 mt-2 pl-4" style="color: var(--text-primary);">
+                        <li>Conducting Agile full stack dev for a Dutch/German e-commerce platform.</li>
+                        <li>Developing the React front-end and the PHP/Laravel backend.</li>
+                        <li>Integrating the back-end with the front-end using the Lumen API.</li>
+                        <li>Providing a dashboard with Voyager for content and WooCommerce for orders.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-1">
+                        <div>
+                            <h3 class="text-2xl font-semibold font-roboto-mono experience-title">Data Analyst</h3>
+                            <p class="text-lg font-semibold mb-0 company-name">HUAWEI TECHNOLOGIES</p>
+                            <p class="text-sm location-info mt-1">
+                                <i class="fas fa-map-marker-alt"></i> Tehran - Onsite
+                            </p>
+                        </div>
+                        <span class="text-sm mt-2 md:mt-0 font-roboto-mono dates">2022 - 2023</span>
+                    </div>
+                     <button class="details-toggle">
+                        Details <i class="fas fa-chevron-right arrow ml-1"></i>
+                    </button>
+                    <ul class="experience-details list-disc list-inside space-y-1 mt-2 pl-4" style="color: var(--text-primary);">
+                        <li>Data Analysis for recognizing anomalies and identifying patterns.</li>
+                        <li>SMSC and MMSC maintenance engineer and KPI monitoring.</li>
+                        <li>24/7 onCall customer (MTN) support for incident handling and issue resolving.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2">
+                        <div>
+                            <h3 class="text-2xl font-semibold font-roboto-mono experience-title">Freelance Web Developer</h3>
+                            <p class="text-lg font-semibold mb-1 company-name">
+                                <a href="http://takinsoft.ir" target="_blank" rel="noopener noreferrer" class="hover:underline" style="color: var(--link-color);">Takinsoft</a>
+                            </p>
+                        </div>
+                        <span class="text-sm mt-2 md:mt-0 font-roboto-mono dates">2015 - 2022</span>
+                    </div>
+                    <button class="details-toggle">
+                        Details <i class="fas fa-chevron-right arrow ml-1"></i>
+                    </button>
+                    <ul class="experience-details list-disc list-inside space-y-1 mt-2 pl-4" style="color: var(--text-primary);">
+                        <li>Met with clients to discuss project requirements and workflow.</li>
+                        <li>Designed and coded websites, from layout to function, according to client specifications.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" data-section-name="Skills" class="portfolio-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center font-roboto-mono mb-12 md:mb-16 section-title-underline" style="color: var(--text-accent);">Skills</h2>
+            <div id="specializationsContainer" class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 fade-in-section">
+                <span class="tag">Full-Stack Web Development</span>
+                <span class="tag">Backend Architecture & API Development</span>
+                <span class="tag">Frontend Engineering & UI/UX Design</span>
+                <span class="tag">Data Analysis & Insights</span>
+                <span class="tag">Cloud Solutions</span>
+                <span class="tag">Agile Project Delivery</span>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 text-center font-roboto-mono skill-title">Languages, Frameworks & Tools</h3>
+                <div id="toolsContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 text-center">
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-laravel skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Laravel</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-react skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">React</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-php skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">PHP</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-wordpress skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">WordPress</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-python skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Python</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-database skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">SQL</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-js skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">JavaScript</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-file-code skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">TypeScript</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-node-js skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Node.js</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-terminal skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Shell Scripting</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-golang skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Go</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-hdd skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">NoSQL</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-layer-group skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">JAMStack</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-rocket skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Hugo</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-aws skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">AWS</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-searchengin skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">ELKStack</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-html5 skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">HTML</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-css3-alt skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">CSS</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-sass skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Sass</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-bootstrap skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Bootstrap</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-java skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Java + XML</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-cogs skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">.NET</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-code skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">C++</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-mobile-alt skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Cordova</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-git-alt skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Git / Github / Gitlab</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-code-branch skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">VS Code, Visual Studio</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-docker skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Docker</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-jira skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Jira</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-tasks skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Asana</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-camera-retro skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Adobe Suite</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-android skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Android Studio</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-file-excel skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Excel, Google Sheets</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-server skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">GaussDB, BigQuery</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fab fa-linux skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Linux</p></div>
+                    <div class="card p-4 rounded-lg border skill-card-item"><i class="fas fa-chart-line skill-icon"></i><p class="text-sm" style="color: var(--text-primary);">Grafana, Zabbix</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="licenses_certifications" data-section-name="Certifications" class="portfolio-section fade-in-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center font-roboto-mono mb-12 md:mb-16 section-title-underline" style="color: var(--text-accent);">Licenses & Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <a href="https://www.credly.com/badges/35eba8f6-aadb-48e7-b84e-9140e812beeb/public_url" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity">
+                        <i class="fas fa-certificate cert-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Google Data Analytics Certificate</h3>
+                        <p class="cert-issuer">Google</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="http://www.coursera.org/account/accomplishments/certificate/MV5LZ8XPPKE9" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity">
+                        <i class="fas fa-certificate cert-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Introduction to TensorFlow</h3>
+                        <p class="cert-issuer">DeepLearning.AI</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/e4359a1fe8c0c4a1c15ea0d65d4fc66a6e6fa94f" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity">
+                        <i class="fas fa-certificate cert-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Introduction to Data Science in Python</h3>
+                        <p class="cert-issuer">DataCamp</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/ZKKFY6V6ZPAF" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity">
+                        <i class="fas fa-certificate cert-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Data Analysis with R Programming</h3>
+                        <p class="cert-issuer">Google / Coursera</p>
+                    </a>
+                </div>
+                 <div class="card">
+                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/914250cd418b88bc93ebbd2f77665a06b097056a" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity"> <i class="fas fa-certificate cert-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Data Processing Shell and Bash Scripting</h3>
+                        <p class="cert-issuer">DataCamp</p>
+                    </a>
+                </div>
+                <div class="card">
+                     <a href="https://www.datacamp.com/statement-of-accomplishment/course/914250cd418b88bc93ebbd2f77665a06b097056a" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity">
+                        <i class="fas fa-certificate cert-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Data manipulation with pandas</h3>
+                        <p class="cert-issuer">DataCamp</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="https://www.datacamp.com/statement-of-accomplishment/course/e50ddae317a1b2619094a7d297e014cc2d914112" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity">
+                         <i class="fas fa-certificate cert-icon-fa"></i>
+                         <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Data Analysis in Excel and Spreadsheets</h3>
+                         <p class="cert-issuer">DataCamp</p>
+                    </a>
+                </div>
+                 <div class="card">
+                    <a href="https://www.datacamp.com/statement-of-accomplishment/track/524cb08d973bf52614cb469c3a2029cea913eacc" target="_blank" rel="noopener noreferrer" class="block hover:opacity-80 transition-opacity">
+                        <i class="fas fa-certificate cert-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">SQL Fundamentals Track</h3>
+                        <p class="cert-issuer">DataCamp</p>
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="block text-center md:text-left">
+                        <i class="fas fa-graduation-cap edu-icon-fa"></i>
+                        <h3 class="text-xl font-semibold mb-1 font-roboto-mono cert-title">Software Engineering</h3>
+                        <p class="cert-issuer">Kharazmi University</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="passion_projects" data-section-name="Projects" class="portfolio-section fade-in-section">
+        <div class="container mx-auto px-6">
+             <h2 class="text-3xl md:text-4xl font-bold text-center font-roboto-mono mb-12 md:mb-16 section-title-underline" style="color: var(--text-accent);">Passion Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 font-roboto-mono project-title">milad.space</h3>
+                    <p class="mb-3">Writing about tech, coding, and AI.</p>
+                    <a href="https://milad.space" target="_blank" rel="noopener noreferrer" class="font-medium">Visit Blog <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 font-roboto-mono project-title">
+                        <a href="https://explorer.solana.com/address/HsVxKa5TyLcqSEk1T2hBNMoikguEp19Wcuar9419q8CE" target="_blank" rel="noopener noreferrer" class="hover:underline">Darkness Token</a>
+                    </h3>
+                    <p class="mb-3">Created a cryptocurrency token on the Solana blockchain.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 font-roboto-mono project-title">
+                        <a href="https://twitter.com/khab_didam" target="_blank" rel="noopener noreferrer" class="hover:underline">Twitter API Bots</a>
+                    </h3>
+                    <p class="mb-3">Working with Twitter API to create bots like "khab didam" or "poolmool".</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 font-roboto-mono project-title">Open Source Dashboard</h3>
+                    <p class="mb-3">
+                        A news dashboard built with Laravel (Backend) and React (Frontend).
+                        View on GitHub:
+                        <a href="https://github.com/m11ad/react-news-frontend" target="_blank" rel="noopener noreferrer" class="github-link-inline"><i class="fab fa-github"></i>Frontend</a>
+                        <a href="https://github.com/m11ad/laravel-news-backend" target="_blank" rel="noopener noreferrer" class="github-link-inline"><i class="fab fa-github"></i>Backend</a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 font-roboto-mono project-title">
+                         <a href="https://www.instagram.com/imaigination_" target="_blank" rel="noopener noreferrer" class="hover:underline">imaigine</a>
+                    </h3>
+                    <p class="mb-3">AI Art with OpenAI, Midjourney, and Stable Diffusion.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-semibold mb-2 font-roboto-mono project-title">Takinsoft Portfolio</h3>
+                    <p class="mb-3">Portfolio of websites developed.</p>
+                    <a href="http://takinsoft.ir" target="_blank" rel="noopener noreferrer" class="font-medium">Visit Portfolio <i class="fas fa-external-link-alt ml-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" data-section-name="Contact" class="portfolio-section fade-in-section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center font-roboto-mono mb-12 md:mb-16 section-title-underline" style="color: var(--text-accent);">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto card p-8 md:p-10">
+                <div class="contact-icons-grid">
+                    <a href="mailto:miladyekleh@gmail.com" class="contact-icon-link contact-icon-link-animated" title="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span class="tooltip-text">miladyekleh@gmail.com</span>
+                    </a>
+                    <a href="https://linkedin.com/in/yekmil/" target="_blank" rel="noopener noreferrer" class="contact-icon-link contact-icon-link-animated" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span class="tooltip-text">linkedin.com/in/yekmil</span>
+                    </a>
+                    <a href="https://github.com/m11ad" target="_blank" rel="noopener noreferrer" class="contact-icon-link contact-icon-link-animated" title="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="tooltip-text">GitHub: yekmil / m11ad</span>
+                    </a>
+                    <a href="https://t.me/yekmilad" target="_blank" rel="noopener noreferrer" class="contact-icon-link contact-icon-link-animated" title="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span class="tooltip-text">Telegram: @yekmilad</span>
+                    </a>
+                     <a href="https://milad.space" target="_blank" rel="noopener noreferrer" class="contact-icon-link contact-icon-link-animated" title="Tech Blog">
+                        <i class="fas fa-rss"></i>
+                        <span class="tooltip-text">milad.space</span>
+                    </a>
+                     <a href="http://takinsoft.ir" target="_blank" rel="noopener noreferrer" class="contact-icon-link contact-icon-link-animated" title="Portfolio Website">
+                        <i class="fas fa-briefcase"></i>
+                         <span class="tooltip-text">takinsoft.ir</span>
+                    </a>
+                    <div class="contact-icon-link contact-icon-link-animated" title="Phone">
+                        <i class="fas fa-phone"></i>
+                        <span class="tooltip-text">+989900994207</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="scrollToTopBtn" class="hidden fixed bottom-8 right-8 p-3 rounded-full shadow-lg focus:outline-none">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <footer class="py-8 text-center border-t">
+        <div class="container mx-auto px-6">
+            <p class="font-roboto-mono">&copy; <span id="currentYear"></span> Milad Yek. All rights reserved.</p>
+            <p class="text-sm mt-1 font-roboto-mono footer-subtext">Multi-Theme Portfolio</p>
+        </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // --- THEME TOGGLE SCRIPT ---
+        const themeToggleTrack = document.getElementById('themeToggleTrack');
+        const themeToggleKnob = document.getElementById('themeToggleKnob');
+        const themeKnobIcon = document.getElementById('themeKnobIcon');
+        const themeSlots = themeToggleTrack.querySelectorAll('.theme-slot');
+        const body = document.body;
+        
+        const themes = ['light', 'dark', 'night'];
+        const themeIcons = {
+            'light': 'fas fa-sun',
+            'dark': 'fas fa-moon',
+            'night': 'fas fa-lightbulb'
+        };
+        
+        let isDragging = false;
+        let dragStartX;
+        let initialKnobTranslateX; 
+        let currentKnobTranslateX = 0; 
+
+        // Get actual dimensions after DOM is ready
+        const trackWidth = themeToggleTrack.offsetWidth;
+        const knobWidth = themeToggleKnob.offsetWidth;
+        const trackPadding = parseFloat(getComputedStyle(themeToggleTrack).paddingLeft); 
+
+        const minTranslateX = trackPadding; 
+        const maxTranslateX = trackWidth - knobWidth - trackPadding; 
+
+        const knobSnapPositions = {
+            'light': minTranslateX,
+            'dark': (trackWidth / 2) - (knobWidth / 2),
+            'night': maxTranslateX
+        };
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        currentKnobTranslateX = knobSnapPositions[savedTheme]; 
+        themeToggleKnob.style.transform = `translateX(${currentKnobTranslateX}px)`; 
+
+        function applyTheme(themeName, animateKnob = true) {
+            body.classList.remove('dark-mode', 'light-mode', 'night-mode');
+            body.classList.add(themeName + '-mode');
+            localStorage.setItem('theme', themeName);
+
+            if (themeKnobIcon && themeIcons[themeName]) {
+                themeKnobIcon.className = themeIcons[themeName] + ' text-base'; 
+            }
+            
+            currentKnobTranslateX = knobSnapPositions[themeName];
+            
+            if (animateKnob) {
+                themeToggleKnob.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s ease';
+            } else {
+                themeToggleKnob.style.transition = 'background-color 0.3s ease'; 
+            }
+            themeToggleKnob.style.transform = `translateX(${currentKnobTranslateX}px)`;
+            
+            requestAnimationFrame(() => {
+                themeKnobIcon.style.color = getComputedStyle(body).getPropertyValue('--theme-toggle-knob-icon-color').trim();
+                themeToggleTrack.style.backgroundColor = getComputedStyle(body).getPropertyValue('--theme-toggle-track-bg').trim();
+                themeToggleTrack.style.borderColor = getComputedStyle(body).getPropertyValue('--theme-toggle-track-border').trim();
+                themeToggleKnob.style.backgroundColor = getComputedStyle(body).getPropertyValue('--theme-toggle-knob-bg').trim();
+                themeToggleKnob.style.boxShadow = `0 2px 4px ${getComputedStyle(body).getPropertyValue('--theme-toggle-knob-shadow').trim()}`;
+
+                themeSlots.forEach(slot => {
+                    const slotIcon = slot.querySelector('.theme-slot-icon');
+                    if (slot.dataset.theme === themeName) {
+                        slotIcon.style.color = getComputedStyle(body).getPropertyValue('--theme-toggle-slot-icon-active-color').trim();
+                    } else {
+                        slotIcon.style.color = getComputedStyle(body).getPropertyValue('--theme-toggle-slot-icon-color').trim();
+                    }
+                });
+            });
+        }
+        
+        applyTheme(savedTheme, false); 
+
+        themeSlots.forEach(slot => {
+            slot.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const selectedTheme = slot.dataset.theme;
+                applyTheme(selectedTheme);
+            });
+        });
+        
+        function startDrag(e) {
+            e.preventDefault();
+            isDragging = true;
+            themeToggleKnob.classList.add('dragging');
+            themeToggleKnob.style.transition = 'background-color 0.3s ease';
+            dragStartX = e.clientX || (e.touches && e.touches[0].clientX);
+            
+            const transformStyle = themeToggleKnob.style.transform;
+            const match = transformStyle.match(/translateX\(([^px]+)px\)/);
+            initialKnobTranslateX = match ? parseFloat(match[1]) : knobSnapPositions[localStorage.getItem('theme') || 'light'];
+
+            document.addEventListener('mousemove', onDrag);
+            document.addEventListener('touchmove', onDrag, { passive: false });
+            document.addEventListener('mouseup', endDrag);
+            document.addEventListener('touchend', endDrag);
+        }
+
+        function onDrag(e) {
+            if (!isDragging) return;
+            e.preventDefault();
+            let currentDragX = e.clientX || (e.touches && e.touches[0].clientX);
+            const dx = currentDragX - dragStartX;
+            let newTranslateX = initialKnobTranslateX + dx;
+
+            newTranslateX = Math.max(minTranslateX, Math.min(newTranslateX, maxTranslateX));
+            themeToggleKnob.style.transform = `translateX(${newTranslateX}px)`;
+        }
+
+        function endDrag() {
+            if (!isDragging) return;
+            isDragging = false;
+            themeToggleKnob.classList.remove('dragging');
+            
+            const currentTransform = window.getComputedStyle(themeToggleKnob).transform;
+            const currentKnobVisualX = getKnobPositionFromTransform(currentTransform);
+
+            const knobCenter = currentKnobVisualX + knobWidth / 2;
+            const slotWidthForSnap = themeToggleTrack.offsetWidth / themes.length; 
+            let closestSlotIndex = 0;
+            let minDistance = Infinity;
+
+            themes.forEach((theme, index) => {
+                const slotCenter = (index * slotWidthForSnap) + (slotWidthForSnap / 2);
+                const distance = Math.abs(knobCenter - slotCenter);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestSlotIndex = index;
+                }
+            });
+            applyTheme(themes[closestSlotIndex], true); 
+
+            document.removeEventListener('mousemove', onDrag);
+            document.removeEventListener('touchmove', onDrag);
+            document.removeEventListener('mouseup', endDrag);
+            document.removeEventListener('touchend', endDrag);
+        }
+        
+        function getKnobPositionFromTransform(transformValue) {
+            if (transformValue === 'none' || !transformValue) return knobSnapPositions[localStorage.getItem('theme') || 'light']; 
+            const matrix = transformValue.match(/matrix.*\((.+)\)/);
+            if (matrix && matrix[1]) {
+                const values = matrix[1].split(', ');
+                return parseFloat(values[4]); 
+            }
+            return knobSnapPositions[localStorage.getItem('theme') || 'light'];
+        }
+
+
+        themeToggleKnob.addEventListener('mousedown', startDrag);
+        themeToggleKnob.addEventListener('touchstart', startDrag, { passive: false });
+
+
+        // --- OTHER PAGE SCRIPTS ---
+        const detailToggles = document.querySelectorAll('.details-toggle');
+        detailToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const detailsList = toggle.nextElementSibling;
+                const arrow = toggle.querySelector('.arrow');
+                if (detailsList.classList.contains('open')) {
+                    detailsList.classList.remove('open');
+                    arrow.classList.remove('open');
+                } else {
+                    detailsList.classList.add('open');
+                    arrow.classList.add('open');
+                }
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#') && targetId.length > 1) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        let topBarHeight = document.getElementById('topBar').offsetHeight;
+                        let additionalOffset = 20;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - topBarHeight - additionalOffset;
+                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        const scrollThreshold = window.innerHeight * 0.7;
+        const scrollspyNav = document.getElementById('scrollspyNav');
+        const scrollspyLinks = scrollspyNav.querySelectorAll('.scrollspy-link');
+        const portfolioSections = document.querySelectorAll('.portfolio-section');
+        const topBar = document.getElementById('topBar');
+        let topBarHeight = topBar ? topBar.offsetHeight : 0;
+        let scrollTimeout;
+
+
+        function updateScrollspy() {
+            if (!scrollspyNav || scrollspyLinks.length === 0) return;
+            topBarHeight = topBar ? topBar.offsetHeight : 0;
+            let currentSectionId = '';
+            let activeSectionFound = false;
+
+            portfolioSections.forEach(section => {
+                const sectionTop = section.offsetTop - topBarHeight - 120;
+                 if (window.pageYOffset >= sectionTop) {
+                    currentSectionId = section.id;
+                    activeSectionFound = true;
+                }
+            });
+             if (!activeSectionFound && window.pageYOffset < portfolioSections[0].offsetTop - topBarHeight - 120) {
+                currentSectionId = 'about';
+            }
+
+
+            scrollspyLinks.forEach(link => {
+                link.classList.remove('active-scrollspy');
+                if (link.getAttribute('href') === '#' + currentSectionId) {
+                    link.classList.add('active-scrollspy');
+                }
+            });
+        }
+
+        const scrollProgressBar = document.getElementById('scrollProgressBar');
+        function updateScrollProgressBar() {
+            if (!scrollProgressBar) return;
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            scrollProgressBar.style.width = scrolled + '%';
+        }
+
+        window.addEventListener('scroll', () => {
+            if (scrollToTopBtn) {
+                if (window.pageYOffset > scrollThreshold) {
+                    scrollToTopBtn.classList.remove('hidden');
+                } else {
+                    scrollToTopBtn.classList.add('hidden');
+                }
+            }
+
+            if (scrollspyNav) {
+                scrollspyNav.classList.add('visible');
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    if (scrollspyNav) {
+                        scrollspyNav.classList.remove('visible');
+                    }
+                }, 1500);
+            }
+
+            updateScrollspy();
+            updateScrollProgressBar();
+        });
+
+
+        if(scrollToTopBtn) {
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        updateScrollspy();
+        updateScrollProgressBar();
+        if (scrollspyNav && window.pageYOffset === 0) {
+             scrollspyNav.classList.remove('visible');
+        }
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // --- TYPEWRITER SCRIPT ---
+        const heroNameEl = document.getElementById('hero-name-typewriter');
+        const heroSubtitleEl = document.getElementById('hero-subtitle-typewriter');
+        const heroSubtitleWords = ["Software Engineer", "Fullstack Developer", "Data Analyst", "Web Designer"];
+
+        function sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        const typeWriterNameSequence = async (element, initialName, finalName) => {
+            element.textContent = ''; // Clear initial text
+
+            // 1. Type initialName ("Milad Yekleh")
+            for (let i = 0; i < initialName.length; i++) {
+                element.textContent += initialName.charAt(i);
+                await sleep(120); // Typing speed
+            }
+            await sleep(1500); // Wait after typing initialName
+
+            // 2. Slowly delete "leh"
+            const charsToDeleteCount = initialName.length - finalName.length;
+            for (let i = 0; i < charsToDeleteCount; i++) {
+                element.textContent = element.textContent.slice(0, -1);
+                await sleep(250); // Slower deleting speed for individual characters
+            }
+            // Name is now "Milad Yek" and will stay like that.
+        };
+
+
+        const typeWriterCycle = async (element, words) => {
+            let wordIndex = 0;
+            element.textContent = ''; // Clear initial text
+
+            while (true) {
+                const currentWord = words[wordIndex];
+                // Typing
+                for (let i = 0; i < currentWord.length; i++) {
+                    element.textContent += currentWord.charAt(i);
+                    await sleep(120); // Typing speed
+                }
+                await sleep(1500); // Wait after typing
+
+                // Deleting
+                for (let i = 0; i < currentWord.length; i++) {
+                    element.textContent = element.textContent.slice(0, -1);
+                    await sleep(60); // Deleting speed
+                }
+                await sleep(300); // Wait after deleting
+
+                wordIndex = (wordIndex + 1) % words.length; // Move to the next word
+            }
+        };
+
+        if (heroNameEl && heroSubtitleEl) {
+            typeWriterNameSequence(heroNameEl, "Milad Yekleh", "Milad Yek");
+            typeWriterCycle(heroSubtitleEl, heroSubtitleWords);
+        }
+
+        // --- FADE-IN & SCALE-UP ANIMATION SCRIPT ---
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        // General fade-in for sections
+        const sectionsToFadeIn = document.querySelectorAll('.fade-in-section');
+        if (sectionsToFadeIn.length > 0) {
+            const sectionObserverCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const sectionIntersectionObserver = new IntersectionObserver(sectionObserverCallback, observerOptions);
+            sectionsToFadeIn.forEach(section => {
+                sectionIntersectionObserver.observe(section);
+            });
+        }
+        
+        // Staggered scale-up for skill cards
+        const skillCards = document.querySelectorAll('.skill-card-item');
+        if (skillCards.length > 0) {
+             const skillCardObserverCallback = (entries, observer) => {
+                entries.forEach(entry => { 
+                    if (entry.isIntersecting) {
+                        let itemIndex = 0;
+                        let el = entry.target;
+                        while (el.previousElementSibling && el.previousElementSibling.classList.contains('skill-card-item')) {
+                            itemIndex++;
+                            el = el.previousElementSibling;
+                        }
+                        entry.target.style.transitionDelay = `${itemIndex * 35}ms`; // Faster stagger (35ms)
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const skillCardIntersectionObserver = new IntersectionObserver(skillCardObserverCallback, observerOptions);
+            skillCards.forEach(card => {
+                skillCardIntersectionObserver.observe(card);
+            });
+        }
+
+        // Staggered scale-up for contact icons
+        const contactIcons = document.querySelectorAll('.contact-icon-link-animated');
+        if (contactIcons.length > 0) {
+            const contactIconObserverCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let itemIndex = 0;
+                        let el = entry.target;
+                         while (el.previousElementSibling && el.previousElementSibling.classList.contains('contact-icon-link-animated')) {
+                            itemIndex++;
+                            el = el.previousElementSibling;
+                        }
+                        entry.target.style.transitionDelay = `${itemIndex * 100}ms`; // Keep original stagger for contact icons
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+            const contactIconIntersectionObserver = new IntersectionObserver(contactIconObserverCallback, observerOptions);
+            contactIcons.forEach(icon => {
+                contactIconIntersectionObserver.observe(icon);
+            });
+        }
+
+      });
+    </script>
+
+</body>
+</html>
